@@ -1,6 +1,3 @@
-#include <stdio.h>
-
-
 void mergesort(int* vet, int start, int end){
     // divide
     if(start >= end){
@@ -102,23 +99,4 @@ void quicksort_v01(int *vet, int len){
         vet[k] = more[i];
         k++;
     }
-}
-
-void print_vet(int* vet, int len){
-    for(int i = 0; i < len; i++){
-        printf("%d; ", vet[i]);
-    }
-    printf("\n");
-}
-
-int main(){
-    int nums[] = {1,5,2,4,1,0,3,0,0,5};
-    int nums_len = sizeof(nums) / sizeof(nums[0]);
-
-    print_vet(nums, nums_len);
-    //mergesort(nums, 0, nums_len - 1);
-    quicksort_v01(nums, nums_len - 1);
-    print_vet(nums, nums_len);
-
-    return 0;
 }
